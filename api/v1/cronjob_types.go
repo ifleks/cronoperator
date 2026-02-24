@@ -50,13 +50,13 @@ type CronJobSpec struct {
 
 	// +optional
 	// +kubebuilder:default:=Allow
-	ConcurrencyPolicy *ConcurrencyPolicy `json:"concurrencyPolicy,omitempty"`
+	ConcurrencyPolicy ConcurrencyPolicy `json:"concurrencyPolicy,omitempty"`
 
 	// +optional
 	Suspend *bool `json:"suspend,omitempty"`
 
 	// +required
-	JobTemplate batchv1.JobSpec `json:"jobTemplate"`
+	JobTemplate batchv1.JobTemplateSpec `json:"jobTemplate"`
 
 	// +optional
 	// +kubebuilder:validation:Minimum=0
