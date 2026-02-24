@@ -8,4 +8,14 @@ layout:
 - go.kubebuilder.io/v4
 projectName: cronoperator
 repo: github.com/ifleks/cronoperator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: tutorial.w-s-g.ru
+  group: batch
+  kind: CronJob
+  path: github.com/ifleks/cronoperator/api/v1
+  version: v1
 version: "3"

@@ -1,0 +1,9 @@
+apiVersion: batch.tutorial.w-s-g.ru/v1
+kind: CronJob
+metadata:
+  labels:
+    app.kubernetes.io/name: cronoperator
+    app.kubernetes.io/managed-by: kustomize
+  name: cronjob-sample
+spec:
+  # TODO(user): Add fields here
